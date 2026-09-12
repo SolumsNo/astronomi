@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#05070b" />
+  <meta name="description" content="Astrofotografi av Christian Solum — tåker, galakser, Månen, Solen og astronomiske hendelser." />
+  <title>Christian Solum — Astrofotografi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars stars-a" aria-hidden="true"></div>
+  <div class="stars stars-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Til toppen">
+      <span class="brand-mark">CS</span>
+      <span class="brand-text">CHRISTIAN SOLUM</span>
+    </a>
+    <nav aria-label="Hovedmeny">
+      <a href="#gallery">Galleri</a>
+      <a href="#about">Om</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/images/north-america-detail.jpeg" alt="Detaljert astrofoto av en stjernetåke" fetchpriority="high" />
+      <div class="hero-vignette"></div>
+      <div class="hero-content">
+        <p class="eyebrow">ASTROPHOTOGRAPHY · NORWAY</p>
+        <h1 id="hero-title">LYS FRA<br><span>DET FJERNE</span></h1>
+        <p class="hero-lead">Tåker, galakser, Månen og Solen — fotografert fra jorden.</p>
+        <a class="hero-cta" href="#gallery">Utforsk galleriet <span>↓</span></a>
+      </div>
+      <div class="hero-meta">NGC 7000 · North America Nebula</div>
+    </section>
+
+    <section class="intro" id="about">
+      <div>
+        <p class="section-kicker">CHRISTIAN SOLUM</p>
+        <h2>Et personlig arkiv over nattehimmelen.</h2>
+      </div>
+      <p>En samling astrofotografier av deep-sky-objekter, galakser, Månen, Solen og astronomiske hendelser. Klikk på et bilde for fullskjerm.</p>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-head">
+        <div>
+          <p class="section-kicker">GALLERI</p>
+          <h2>29 bilder</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrer galleri">
+          <button class="filter active" data-filter="all">Alle</button>
+          <button class="filter" data-filter="nebula">Tåker</button>
+          <button class="filter" data-filter="galaxy">Galakser</button>
+          <button class="filter" data-filter="moon">Månen</button>
+          <button class="filter" data-filter="sun">Solen</button>
+          <button class="filter" data-filter="event">Hendelser</button>
+        </div>
+      </div>
+      <div class="gallery" id="gallery-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Christian Solum</span>
+    <span>ASTROPHOTOGRAPHY</span>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lb-close" aria-label="Lukk">×</button>
+    <button class="lb-nav lb-prev" aria-label="Forrige bilde">‹</button>
+    <figure>
+      <img id="lb-image" alt="" />
+      <figcaption>
+        <div>
+          <p id="lb-category"></p>
+          <h3 id="lb-title"></h3>
+        </div>
+        <p id="lb-note"></p>
+      </figcaption>
+    </figure>
+    <button class="lb-nav lb-next" aria-label="Neste bilde">›</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
